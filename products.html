@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalogue | RenewTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-leaf"></i> RENEWTECH
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="hero" style="padding: 60px 0; background: var(--dark); color: white; text-align: center;">
+            <div class="container">
+                <h1 style="color: white; margin-bottom: 0.5rem; font-size: 2.5rem;">Product Catalogue</h1>
+                <p>Explore our high-performance solar and industrial energy equipment.</p>
+            </div>
+        </div>
+
+        <section class="catalogue">
+            <div class="container">
+                <div class="filters">
+                    <button class="filter-btn active" data-category="All">All Products</button>
+                    <button class="filter-btn" data-category="Solar Panels">Solar Panels</button>
+                    <button class="filter-btn" data-category="Inverters">Inverters</button>
+                    <button class="filter-btn" data-category="Batteries">Batteries</button>
+                </div>
+
+                <div id="products-grid" class="products-grid">
+                    <!-- Products will be injected here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>RENEWTECH</h2>
+                    <p>Leading the transition to sustainable energy with cutting-edge industrial equipment and solar
+                        solutions.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Product Catalogue</a></li>
+                        <li><a href="about.html">About Company</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?cat=Solar Panels">Solar Panels</a></li>
+                        <li><a href="products.html?cat=Inverters">Inverters</a></li>
+                        <li><a href="products.html?cat=Batteries">Batteries</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Energy Way, Industrial Hub, NY 10001</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@renewtech.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RenewTech Solutions. All rights reserved. | <a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

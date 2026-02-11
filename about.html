@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | RenewTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .vision-mission {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .vm-card {
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border-top: 5px solid var(--primary);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #ddd;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        .item-right .timeline-content {
+            margin-left: auto;
+        }
+
+        @media (max-width: 768px) {
+            .vision-mission {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .timeline-content {
+                width: 85%;
+                margin-left: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-leaf"></i> RENEWTECH
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="hero"
+            style="padding: 100px 0; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&q=80&w=1200'); background-size: cover; background-position: center; color: white; text-align: center;">
+            <div class="container">
+                <h1 style="color: white; font-size: 3.5rem;">Our Story</h1>
+                <p style="font-size: 1.25rem;">Building a sustainable world through innovation and excellence.</p>
+            </div>
+        </div>
+
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Vision & Mission</h2>
+                    <p>Guided by our core values, we aim to transform the energy landscape across the globe.</p>
+                </div>
+                <div class="vision-mission">
+                    <div class="vm-card">
+                        <h3>Our Vision</h3>
+                        <p>To be the world's most trusted partner in renewable energy, known for our technological
+                            leadership and unwavering commitment to environmental stewardship.</p>
+                    </div>
+                    <div class="vm-card">
+                        <h3>Our Mission</h3>
+                        <p>To provide high-quality, efficient, and accessible sustainable energy equipment that empowers
+                            businesses and individuals to reduce their ecological impact.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: var(--light-gray);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Journey</h2>
+                    <p>Key milestones that define our growth and impact in the renewable energy sector.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>2015: The Beginning</h4>
+                            <p>RenewTech was founded with a small team of engineers dedicated to solar efficiency.</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-item item-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>2018: Expansion</h4>
+                            <p>Launched our global dealer program and expanded into industrial energy storage.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>2021: Innovation Award</h4>
+                            <p>Recognized for our breakthrough in hybrid inverter efficiency and smart grid integration.
+                            </p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-item item-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>2024: Net Zero Leader</h4>
+                            <p>Successfully helped over 1,000 industrial clients transition to 100% renewable power.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>RENEWTECH</h2>
+                    <p>Leading the transition to sustainable energy with cutting-edge industrial equipment and solar
+                        solutions.</p>
+                </div>
+                <!-- same footer links as index.html -->
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Product Catalogue</a></li>
+                        <li><a href="about.html">About Company</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?cat=Solar Panels">Solar Panels</a></li>
+                        <li><a href="products.html?cat=Inverters">Inverters</a></li>
+                        <li><a href="products.html?cat=Batteries">Batteries</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Energy Way, Industrial Hub, NY 10001</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@renewtech.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RenewTech Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

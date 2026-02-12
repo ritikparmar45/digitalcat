@@ -1,10 +1,15 @@
 import { products } from './js/products.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const path = window.location.pathname;
-    const isHomePage = path.endsWith('index.html') || path === '/' || path.endsWith('/');
+    console.log('Project initialized. Current path:', window.location.pathname);
+    console.log('Available products:', products);
+
+    const path = window.location.pathname.toLowerCase();
+    const isHomePage = path.endsWith('index.html') || path === '/' || path.endsWith('/') || path.endsWith('/index');
     const isProductsPage = path.includes('products.html');
     const isDetailsPage = path.includes('product-details.html');
+
+    console.log('Page detection:', { isHomePage, isProductsPage, isDetailsPage });
 
     // --- Home Page Logic ---
     if (isHomePage) {
@@ -95,8 +100,12 @@ function initCatalogue() {
 function createProductCard(product) {
     return `
         <div class="product-card">
-            <div class="product-image">
-                <img src="${product.image}" alt="${product.name}" loading="lazy">
+            <div class="product-image" id="img-container-${product.id}">
+                <img src="${product.image}" 
+                     alt="${product.name}" 
+                     loading="lazy"
+                     onload="this.classList.add('loaded'); document.getElementById('img-container-${product.id}').classList.add('loaded')"
+                     onerror="this.src='https://via.placeholder.com/400x300?text=Image+Not+Found'">
             </div>
             <div class="product-info">
                 <span class="product-category">${product.category}</span>
@@ -131,8 +140,11 @@ function initProductDetails() {
                 </a>
                 
                 <div class="details-grid">
-                    <div class="product-gallery">
-                        <img src="${product.image}" alt="${product.name}">
+                    <div class="product-gallery product-image" id="detail-img-container">
+                        <img src="${product.image}" 
+                             alt="${product.name}"
+                             onload="this.classList.add('loaded'); document.getElementById('detail-img-container').classList.add('loaded')"
+                             onerror="this.src='https://via.placeholder.com/800x600?text=Image+Not+Found'">
                     </div>
                     <div class="product-main-info">
                         <span class="product-category">${product.category}</span>
